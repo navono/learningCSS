@@ -1,0 +1,62 @@
+p {
+  margin: 5px;
+  padding: 10px;
+  border: 2px solid black;
+  background-color: cyan;
+}
+
+p:nth-child(1) {
+  width: 150px;
+  font-size: 18px;
+}
+
+p:nth-child(2) {
+  width: 250px;
+  font-size: 24px;
+}
+
+p:nth-child(3) {
+  width: 350px;
+  font-size: 30px;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate {
+  color: red;
+  width: 100px;
+  font-size: 40px;
+  transform-origin: center;
+}
+
+.animate:hover {
+  animation-name: rotate;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 5;
+}
+
+/* 
+  绝对单位有：
+    - px
+    - mm
+    - cm
+    - in (inches)
+    - pt (points, 1/72 of an inches)
+    - pc (picas, 12 points)
+
+  相对单位：
+    - em : 1em和当前元素的 font-size 一样大（大写 M 的宽度）。浏览器的默认大小是 16px，也就是 1em = 16px。
+      默认大小是从父元素继承而来。
+    - ex, ch：（小写 x 的高度，数字 0 的宽度）
+    - rem：root em。总是和默认的 font-size 相同。
+    - vm, vh：1/100 的 viewport 的宽度和高度
+*/
