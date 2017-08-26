@@ -3,13 +3,28 @@
    - 元素类型
    - className
    - id
+
+   选择器可以分为以下几大类：
+   - Simple selectors：基于元素的类型来匹配，比如 class,id
+   - Attribute selectors：基于属性值匹配
+   - Pseudo-classes：基于特定的状态匹配，比如鼠标hover
+   - Pseudo-elements：基于和其他元素的位置关系匹配，比如段落的前两个字符
+   - Combinators：组合
+      - The descendant selector: 空格 所有子孙元素
+      - The child selector：> 第一个元素的所有孩子元素
+      - The adjacent sibling selector: + 临近元素
+      - The general sibling selector: ~ 同层的所有元素
+   - Multiple selectors：一样是组合
 */
 
 
 #title {
-  color: blue;
-  background-color: yellow;
-  border: 1px solid black;
+  color: red;
+  text-shadow: 1px 1px 1px black;
+  text-align: center;
+  padding: 3px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 25), rgba(0, 0, 0, 0.1));
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5), inset -2px -2px 5px rgba(255, 255, 255, 0.5);
 }
 
 .content {
@@ -19,4 +34,30 @@
 span {
   border: 1px solid black;
   background-color: lime;
+}
+
+/* Universal selector */
+* {
+  font-family: cursive;
+}
+
+/* Combinators：组合 */
+/* The descendant selector */
+section p {
+  color: blue;
+}
+
+/* The child selector */
+section > p {
+  background-color: yellow;
+}
+
+/* The adjacent sibling selector */
+h2 + p {
+  text-transform: uppercase;
+}
+
+/* The general sibling selector */
+h2 ~ p {
+  border: 1px dashed black;
 }
