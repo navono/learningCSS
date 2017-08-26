@@ -3,20 +3,24 @@
    - 元素类型
    - className
    - id
-
 */
 
 
-h1 {
+#title {
   color: blue;
   background-color: yellow;
   border: 1px solid black;
 }
 
-p {
+.content {
   color: red;
 }
 
 li {
   text-shadow: 1px 1px 1px purple;
+}
+
+span {
+  border: 1px solid black;
+  background-color: lime;
 }
