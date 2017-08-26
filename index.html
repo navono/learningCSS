@@ -12,8 +12,34 @@
     -->
     <link href="css/style.css" rel="stylesheet">
     <style>
+
+      /* css由两部分组成
+        - 属性（Properties）
+        - 值（Values）
+      
+        属性-值（paired）称之为CSS声明（CSS declaration），
+        CSS声明被置入在CSS声明块（CSS Declaration Blocks）中。
+        CSS声明块和选择器（Selectors）一起组成CSS规则集（CSS Rulesets）。
+
+        CSS规则集是样式表中的主要构建块，是称之为：CSS表述（CSS statements）中的一种，其他的还有：
+        - At-rules。以 @ 开头。比如：@import 'custome.css'
+        - Nested statements. at-rule的一个特殊子集。比如：
+          @media (min-width: 801px) {
+            body {
+              margin: 0 auto;
+              width: 800px;
+            }
+          }
+          上述语句只会在页面的宽度超过800像素时起作用。
+
+      */
+
       li {
-        text-shadow: 1px 1px 1px purple;
+        text-shadow: 2px 2px 1px purple;
+        text-decoration: aunderline;
+      }
+      li:hover {
+        background: gold;
       }
     </style>
   </head>
