@@ -4,7 +4,18 @@
     <title>My CSS experiment</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- css引入的方式
+      - 使用 link 导入 css文件
+      - internal stylesheet
+      - inline styles（直接写入到元素的 style 属性中）
+    -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+      li {
+        text-shadow: 1px 1px 1px purple;
+      }
+    </style>
   </head>
   <body>
     <h1 id="title">Hello World!</h1>
