@@ -1,0 +1,61 @@
+/* These styles will style our link
+  in all states */
+/* a {
+  color: blue;
+  font-weight: bold;
+} */
+
+/* We want visited links to be the same color
+    as non visited links */
+/* a:visited {
+  color: blue;
+} */
+
+/* We highlight the link when it is
+    hovered (mouse), activated
+    or focused (keyboard) */
+/* a:hover,
+a:active,
+a:focus {
+  color: darkred;
+  text-decoration: none;
+} */
+
+ul {
+  padding: 0;
+}
+
+li {
+  padding: 3px;
+  margin-bottom: 5px;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: red;
+}
+
+li:nth-of-type(even) {
+  background-color: #ccc;
+}
+
+li:nth-of-type(odd) {
+  background-color: #eee;
+}
+
+
+/* Pseudo-elements 
+    ::after
+    ::before
+    ::first-letter
+    ::fist-line
+    ::selection
+    ::backdrop
+
+  */
