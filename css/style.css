@@ -1,3 +1,12 @@
+/* 大括号前的为选择器 
+   选择器可以是：
+   - 元素类型
+   - className
+   - id
+
+*/
+
+
 h1 {
   color: blue;
   background-color: yellow;
@@ -6,4 +15,8 @@ h1 {
 
 p {
   color: red;
+}
+
+li {
+  text-shadow: 1px 1px 1px purple;
 }
