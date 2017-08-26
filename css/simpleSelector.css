@@ -1,0 +1,21 @@
+
+/* Combinators：组合 */
+/* The descendant selector */
+section p {
+  color: blue;
+}
+
+/* The child selector */
+section > p {
+  background-color: yellow;
+}
+
+/* The adjacent sibling selector */
+h2 + p {
+  text-transform: uppercase;
+}
+
+/* The general sibling selector */
+h2 ~ p {
+  border: 1px dashed black;
+}
