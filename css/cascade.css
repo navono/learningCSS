@@ -1,0 +1,29 @@
+#winning {
+  background-color: red;
+  border: 1px solid black;
+}
+
+.better {
+  background-color: gray;
+  border: none !important;
+}
+
+/* 
+  color 和 padding 起作用，而 background-color 却没起作用。
+  理论上后面的规则会覆盖前面的规则。
+  但是 ID/class 比元素选择器有更高的优先级
+
+  ID 的优先级比 class 高，因为 ID 是特别指定的元素。
+
+  如果由 !importance ，那么此规则的优先级最高。
+
+  因此，color 和 padding 会被传递；接下来的是 class 的规则传递；
+  接着就是 ID 的规则。其中 如果出现 !importance，那么它的优先级最高。
+
+  建议 !important 少用为好。因为它阻止了样式的正常传递。
+*/
+p {
+  background-color: blue;
+  color: white;
+  padding: 5px;
+}
