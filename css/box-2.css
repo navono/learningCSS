@@ -1,0 +1,24 @@
+div {
+  width: 300px;
+  padding: 20px;
+  margin: 10px auto;
+  line-height: 3;
+  background-color: #f66;
+  text-align: center;
+  /* border-related properties */
+  border: 20px solid black;
+  background-clip: padding-box;
+  border-image-source: url(https://mdn.mozillademos.org/files/13060/border-image.png);
+  /* 切割背景图片，分别在9个区域：4个角，4个边，中间 
+     接收 1,2,3,4个值
+     With one value:    the value is a slice
+     With two values:   the values specify vertical and horizontal positions
+     With three values: the values specify top, horizontal, and bottom positions
+     With four values:  the values specify top, right, bottom, left positions
+  
+     上右下左均为 40
+     */
+  border-image-slice: 40;
+  /* 定义背景图片的中间部分如何布局 */
+  border-image-repeat: round;
+}
