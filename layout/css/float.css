@@ -1,0 +1,67 @@
+div:nth-of-type(1) {
+  width: 48%;
+  float: left;
+}
+
+div:nth-of-type(2) {
+  width: 48%;
+  float: right;
+}
+
+.firstCol::first-line {
+  text-transform: uppercase;
+}
+
+/* drop cap */
+.firstCol::first-letter {
+  font-size: 2em;
+  border: 1px solid black;
+  background: red;
+  float: left;
+  padding: 2px;
+  margin-right: 4px;
+}
+
+div img {
+  float: left;
+  margin-right: 30px;
+}
+
+div img + p {
+  line-height: 2;
+  word-spacing: 0.1rem;
+}
+
+/* 在 footer 中加入 margin-top 属性，但是不起作用
+  因此增加额外的不显示的 div，用来 clear
+*/
+.clearfix {
+  clear: both;
+}
+
+footer {
+  margin-top: 4%;
+}
+
+/* 修复不同列的高度不同问题。
+   但是如果某一列的高度超过了我们设置的高度，那么
+   列中的内容会超出。因此需要引入 flexbox 模式。
+   或者也可以使用 overflow
+*/
+.column {
+  height: 550px;
+}
+
+/* float遇到的问题，比如增加下面的样式 */
+.column, footer {
+  padding: 1%;
+  border: 2px solid black;
+  background-color: gray;
+}
+
+/* 解决的办法是增加下面的样式.
+   box-sizing会使box的宽度= conten + padding + border
+*/
+* {
+  box-sizing: border-box;  
+}
