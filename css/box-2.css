@@ -21,4 +21,5 @@ div {
   border-image-slice: 40;
   /* 定义背景图片的中间部分如何布局 */
   border-image-repeat: round;
+  /* box-shadow: 5px 5px 5px rgba(0,0,0,0.7); */
 }
