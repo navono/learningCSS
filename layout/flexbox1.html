@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Flexbox 1 — basic flexbox model chosen</title>
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+      body {
+        margin: 0;
+      }
+      header {
+        background: purple;
+        height: 100px;
+      }
+      h1 {
+        text-align: center;
+        color: white;
+        line-height: 100px;
+        margin: 0;
+      }
+      article {
+        padding: 10px;
+        margin: 10px;
+        background: aqua;
+      }
+      /* Add your flexbox CSS below here */
+      section {
+        display: flex;
+      }
+
+      article {
+        /* 每个 flex item 在main axis 上的宽度是同等比例，
+           同时可以指定最小大小。意思是：在一开始，每个 flex item从可用的空间中
+           分配 200px，之后，剩余的可用空间按照比例来分配。
+        */
+        flex: 1 200px;
+      }
+      article:nth-of-type(3) {
+        /* 第三个 flex item 比其他的 flex item 宽两倍
+           因此整个 flex container 分四等份。
+
+           flex 是短记写法。它可以通过三个不同的属性来实现。
+           - 无单位的比例值，可以通过属性 flex-grow 指定
+        */
+        flex: 2 200px;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Sample flexbox example</h1>
+    </header>
+
+    <section>
+      <article>
+        <h2>First article</h2>
+
+        <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+      </article>
+
+      <article>
+        <h2>Second article</h2>
+
+        <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+      </article>
+
+      <article>
+        <h2>Third article</h2>
+
+        <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+
+        <p>Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat ennui. Organic small batch paleo 8-bit. Intelligentsia umami wayfarers pickled, asymmetrical kombucha letterpress kitsch leggings cold-pressed squid chartreuse put a bird on it. Listicle pickled man bun cornhole heirloom art party.</p>
+      </article>
+    </section>
+  </body>
+</html>
